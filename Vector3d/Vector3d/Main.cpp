@@ -81,7 +81,7 @@ public:
 	// Functions
 	Vector3D& Normalize()
 	{
-		TYPE m = std::sqrt((x * x) + (y * y) + (z * z));
+		TYPE m = sqrt(x * x + y * y + z * z);
 
 		if (m != 0)
 		{
@@ -104,6 +104,18 @@ public:
 		return (x == 0 && y == 0 && z == 0);
 	}
 
+	TYPE DistanceTo(Vector3D& v) const
+	{
+		TYPE m;
+
+		TYPE disX = x - v.x;
+		TYPE disY = y - v.y;
+		TYPE disZ = z - v.z;
+
+		m = sqrt(disX * disX + disY * disY + disZ * disZ);
+
+		return m;
+	}
 };
 
 int main()
