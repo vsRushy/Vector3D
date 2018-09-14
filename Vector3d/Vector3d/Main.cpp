@@ -79,13 +79,29 @@ public:
 	}
 
 	// Functions
-	void Normalize()
+	Vector3D& Normalize()
 	{
 		TYPE m = std::sqrt((x * x) + (y * y) + (z * z));
 
-		x = x / m;
-		y = y / m;
-		z = z / m;
+		if (m != 0)
+		{
+			x /= m;
+			y /= m;
+			z /= m;
+		}
+		return (*this);
+	}
+
+	Vector3D& Zero()
+	{
+		x = y = z = 0;
+
+		return (*this);
+	}
+
+	bool IsZero()
+	{
+		return (x == 0 && y == 0 && z == 0);
 	}
 
 };
