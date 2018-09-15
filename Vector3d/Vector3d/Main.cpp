@@ -26,7 +26,7 @@ public:
 	}
 
 	// Operator overloading
-	Vector3D& operator+(const Vector3D& v) const
+	Vector3D operator+(const Vector3D& v) const
 	{
 		Vector3D u;
 		u.x = x + v.x;
@@ -36,7 +36,7 @@ public:
 		return u;
 	}
 	
-	Vector3D& operator-(const Vector3D& v) const
+	Vector3D operator-(const Vector3D& v) const
 	{
 		Vector3D u;
 		u.x = x - v.x;
@@ -134,6 +134,9 @@ int main()
 	v1.x = 1; v1.y = 2; v1.z = 3;
 	v1 -= v2;
 	std::cout << "v1 -= v2 = (" << v1.x << ", " << v1.y << ", " << v1.z << ")" << std::endl;
+
+	v1 = v2;
+	std::cout << "v1 = v2: (" << v1.x << ", " << v1.y << ", " << v1.z << ")" << std::endl;
 
 	system("pause");
 	return 0;
