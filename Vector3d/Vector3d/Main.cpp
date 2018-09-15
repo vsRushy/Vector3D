@@ -141,6 +141,23 @@ int main()
 
 	std::cout << "Are v1 and v2 equal? " << (v1 == v2) << std::endl;
 
+	Vector3D<float> v3(7.0, 3.0, 5.0);
+	std::cout << "v3: (" << v3.x << ", " << v3.y << ", " << v3.z << ")" << std::endl;
+
+	v3.Normalize();
+	std::cout << "v3 Normalized: (" << v3.x << ", " << v3.y << ", " << v3.z << ")" << std::endl;
+	v3.x = 7.0; v3.y = 3.0; v3.z = 5.0;
+	
+	v3.Zero();
+	std::cout << "v3 Set to zero: (" << v3.x << ", " << v3.y << ", " << v3.z << ")" << std::endl;
+	v3.x = 7.0; v3.y = 3.0; v3.z = 5.0;
+
+	std::cout << "Is v3 a null vector? " << v3.IsZero() << std::endl;
+
+	Vector3D<float> v4(10.0, 12.0, 7.0);
+	float distance = v3.DistanceTo(v4);
+	std::cout << "Distance from v3 to v4: " << distance << std::endl;
+
 	system("pause");
 	return 0;
 }
