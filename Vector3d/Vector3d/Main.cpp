@@ -26,7 +26,7 @@ public:
 	}
 
 	// Operator overloading
-	Vector3D operator+(Vector3D& v) const
+	Vector3D operator+(const Vector3D& v) const
 	{
 		Vector3D u;
 		u.x = x + v.x;
