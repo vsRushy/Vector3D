@@ -120,7 +120,14 @@ public:
 
 int main()
 {
-	
+	Vector3D<int> v1(1, 2, 3);
+	std::cout << "v1: (" << v1.x << ", " << v1.y << ", " << v1.z << ")" << std::endl;
+	Vector3D<int> v2(2, 3, 4);
+	std::cout << "v2: (" << v2.x << ", " << v2.y << ", " << v2.z << ")" << std::endl;
+	Vector3D<int> r = v1 + v2;
+	std::cout << "v1 + v2 = (" << r.x << ", " << r.y << ", " << r.z << ")" << std::endl;
+	r = v1 - v2;
+	std::cout << "v1 - v2 = (" << r.x << ", " << r.y << ", " << r.z << ")" << std::endl;
 
 	system("pause");
 	return 0;
