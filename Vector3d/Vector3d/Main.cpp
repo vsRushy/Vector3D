@@ -137,6 +137,9 @@ int main()
 
 	v1 = v2;
 	std::cout << "v1 = v2: (" << v1.x << ", " << v1.y << ", " << v1.z << ")" << std::endl;
+	v1.x = 1; v1.y = 2; v1.z = 3;
+
+	std::cout << "Are v1 and v2 equal? " << (v1 == v2) << std::endl;
 
 	system("pause");
 	return 0;
