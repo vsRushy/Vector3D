@@ -11,14 +11,14 @@ public:
 	// Constructors
 	Vector3D() {}
 
-	Vector3D(TYPE _x, TYPE _y, TYPE _z)
+	Vector3D(const TYPE& _x, const TYPE& _y, const TYPE& _z)
 	{
 		x = _x;
 		y = _y;
 		z = _z;
 	}
 
-	Vector3D(Vector3D& v)
+	Vector3D(const Vector3D& v)
 	{
 		x = v.x;
 		y = v.y;
@@ -26,7 +26,7 @@ public:
 	}
 
 	// Operator overloading
-	Vector3D operator+(Vector3D& v)
+	Vector3D operator+(Vector3D& v) const
 	{
 		Vector3D u;
 		u.x = x + v.x;
@@ -36,7 +36,7 @@ public:
 		return u;
 	}
 	
-	Vector3D operator-(Vector3D& v)
+	Vector3D operator-(const Vector3D& v) const
 	{
 		Vector3D u;
 		u.x = x - v.x;
@@ -46,7 +46,7 @@ public:
 		return u;
 	}
 
-	Vector3D operator+=(Vector3D& v)
+	Vector3D operator+=(const Vector3D& v)
 	{
 		x += v.x;
 		y += v.y;
@@ -55,7 +55,7 @@ public:
 		return(*this);
 	}
 
-	Vector3D operator-=(Vector3D& v)
+	Vector3D operator-=(const Vector3D& v)
 	{
 		x -= v.x;
 		y -= v.y;
@@ -64,7 +64,7 @@ public:
 		return(*this);
 	}
 
-	Vector3D operator=(Vector3D& v)
+	Vector3D operator=(const Vector3D& v)
 	{
 		x = v.x;
 		y = v.y;
@@ -73,7 +73,7 @@ public:
 		return (*this);
 	}
 
-	bool operator==(Vector3D v)
+	bool operator==(const Vector3D v) const
 	{
 		return (x == v.x && y == v.y && z == v.z);
 	}
@@ -99,12 +99,12 @@ public:
 		return (*this);
 	}
 
-	bool IsZero()
+	bool IsZero() const
 	{
 		return (x == 0 && y == 0 && z == 0);
 	}
 
-	TYPE DistanceTo(Vector3D& v) const
+	TYPE DistanceTo(const Vector3D& v) const
 	{
 		TYPE m;
 
