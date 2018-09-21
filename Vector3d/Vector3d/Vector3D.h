@@ -13,20 +13,16 @@ public:
 	Vector3D()
 	{}
 
-	Vector3D(const TYPE& x, const TYPE& y, const TYPE& z)
-	{
-		this->x = x;
-		this->y = y;
-		this->z = z;
-	}
-
-	Vector3D(const Vector3D& v)
-	{
-		x = v.x;
-		y = v.y;
-		z = v.z;
-	}
-
+	Vector3D(const TYPE& x, const TYPE& y, const TYPE& z) :
+		x(x),
+		y(y),
+		z(z) {}
+	
+	Vector3D(const Vector3D& v) :
+		x(v.x),
+		y(v.y),
+		z(v.z) {}
+	
 	// Operator overloading
 	Vector3D operator+(const Vector3D& v) const
 	{
