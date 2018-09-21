@@ -103,10 +103,17 @@ public:
 		TYPE disY = y - v.y;
 		TYPE disZ = z - v.z;
 
-		return sqrt(disX * disX + disY * disY + disZ * disZ);
+		return (TYPE)sqrt(disX * disX + disY * disY + disZ * disZ);
 	}
 
-	// distance_squared()
+	TYPE DistanceSquared(const Vector3D& v) const
+	{
+		TYPE disX = x - v.x;
+		TYPE disY = y - v.y;
+		TYPE disZ = z - v.z;
+
+		return (TYPE)(disX * disX + disY * disY + disZ * disZ);
+	}
 };
 
 #endif // __Vector3D_H__
