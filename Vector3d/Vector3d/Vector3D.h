@@ -105,6 +105,8 @@ public:
 
 		return sqrt(disX * disX + disY * disY + disZ * disZ);
 	}
+
+	// distance_squared()
 };
 
 #endif // __Vector3D_H__
