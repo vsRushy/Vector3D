@@ -30,22 +30,12 @@ public:
 	// Operator overloading
 	Vector3D operator+(const Vector3D& v) const
 	{
-		Vector3D u;
-		u.x = x + v.x;
-		u.y = y + v.y;
-		u.z = z + v.z;
-
-		return u;
+		return (Vector3D)(x + v.x, y + v,y, z + v.z);
 	}
 
 	Vector3D operator-(const Vector3D& v) const
 	{
-		Vector3D u;
-		u.x = x - v.x;
-		u.y = y - v.y;
-		u.z = z - v.z;
-
-		return u;
+		return (Vector3D)(x - v.x, y - v, y, z - v.z);
 	}
 
 	Vector3D& operator+=(const Vector3D& v)
