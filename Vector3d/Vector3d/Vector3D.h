@@ -44,7 +44,7 @@ public:
 		y += v.y;
 		z += v.z;
 
-		return(*this);
+		return (*this);
 	}
 
 	Vector3D& operator-=(const Vector3D& v)
@@ -53,7 +53,7 @@ public:
 		y -= v.y;
 		z -= v.z;
 
-		return(*this);
+		return (*this);
 	}
 
 	Vector3D& operator=(const Vector3D& v)
