@@ -81,7 +81,7 @@ public:
 		return (*this);
 	}
 
-	Vector3D& AsNormalized()
+	const Vector3D& AsNormalized()
 	{
 		TYPE m = sqrt(x * x + y * y + z * z);
 
