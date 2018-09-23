@@ -67,7 +67,7 @@ public:
 	}
 
 	// Functions
-	Vector3D& Normalize()
+	Vector3D Normalize()
 	{
 		TYPE m = sqrt(x * x + y * y + z * z);
 
@@ -81,7 +81,21 @@ public:
 		return (*this);
 	}
 
-	Vector3D& Zero()
+	Vector3D& AsNormalized()
+	{
+		TYPE m = sqrt(x * x + y * y + z * z);
+
+		if (m != 0)
+		{
+			x /= m;
+			y /= m;
+			z /= m;
+		}
+
+		return (*this);
+	}
+
+	Vector3D Zero()
 	{
 		x = y = z = 0;
 
