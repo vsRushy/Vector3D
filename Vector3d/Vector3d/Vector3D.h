@@ -34,7 +34,7 @@ public:
 		return (Vector3D)(x - v.x, y - v, y, z - v.z);
 	}
 
-	Vector3D& operator+=(const Vector3D& v)
+	Vector3D operator+=(const Vector3D& v)
 	{
 		x += v.x;
 		y += v.y;
@@ -43,7 +43,7 @@ public:
 		return (*this);
 	}
 
-	Vector3D& operator-=(const Vector3D& v)
+	Vector3D operator-=(const Vector3D& v)
 	{
 		x -= v.x;
 		y -= v.y;
@@ -52,7 +52,7 @@ public:
 		return (*this);
 	}
 
-	Vector3D& operator=(const Vector3D& v)
+	Vector3D operator=(const Vector3D& v)
 	{
 		x = v.x;
 		y = v.y;
